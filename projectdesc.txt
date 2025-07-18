@@ -1,0 +1,47 @@
+this task evaluates your ability to design and implement robust APIs, manage data effectively on the backend and develop efficient, scalable search functions. a basic user interface will servce to demonstrate the functionality and interaction with your backend solution
+
+goal: create a simple web app that allows users to dynamically filter a list of product items based on their input
+
+setup
+backend: using c#
+database: a simple database solution (e.g. sqlite, postgresql, mongodb
+frontend: javascript with any react native
+
+core components
+
+backend api for data generation and storage
+
+data generation endpoint: create a POSt endpoint (/products/generate) that, when called, generatees atleast 1000 "product" records and stores them in the chosen database. the product properties remain the same: name, description, category, brand, price, stock, quantity, SKU, release date, availability status, customer raiting, available sizes and colours. this endpoint could optionally take parameters for the number of products to generate or specific seed data
+
+product retrieval endpoint: Create an API endpoint (e.g. GET /products) that returns a list of product records from the databawse
+
+backend api for dynamic filtering
+
+serach endpoint: create an API endpoint that accepts a search query
+
+backend filtering logic: the backend should implement the core filtering logic. it will query the database for products where any of its properties (name, description, category, brand, or SKU) contain the typed search term.
+
+front end integration:
+
+initial data load: the frontend application will call the GET /products on initial load to display the first set of products on initial load to display the first set of products
+
+Search input: provide a single input field (a text box) where the user can type their search query
+
+dynamic filtering with API calls: as the user types, the fron end should make API calls to the GET /products/search endpoint
+
+display results: display the filtered list of products in a clear and readable format
+
+4 performance and responsiveness
+- the filtering process should feel fast and smooth, even with 1000+ items and multiple characters typed
+5. Host the solution or provide clear and reporducible steps to run the project
+6. testing
+- implement automated tests for areas deemed critical for testing
+7 Assumptions, tradeoffs, and improvements
+- Please write down any assumptions you made during development, any tradeoffs you chose to make (e.g. sacrificing performance for the sake of simplicity), and any improvements you would consider if you had more time.
+
+your own ideas.
+
+feel free to implement any additional features or improvements you believe would enhance the application or demonstrate your skills
+
+
+
